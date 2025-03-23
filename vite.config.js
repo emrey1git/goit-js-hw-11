@@ -5,7 +5,7 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
-    base : '/goit-js-hw-11/',
+    base: '/goit-js-hw-11/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -37,6 +37,12 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+
+    // 🔥 BURAYA EKLE
+    optimizeDeps: {
+      include: ['simplelightbox', 'izitoast'],
+    },
+
     plugins: [
       FullReload(['./src/**/**.html']),
       SortCss({
