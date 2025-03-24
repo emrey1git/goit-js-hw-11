@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+input,
+button {
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow:;
+}
+
+input {
+    flex-grow: 2;
+    /* Input daha fazla genişleyecek */
+    flex-shrink: 1;
+    /* Genişlik azaldığında daralmasını sağlar */
+}
+
+button {
+    flex-grow: 1;
+    /* Buton da biraz daha büyüyebilir ama input kadar büyük olmaz */
+    flex-shrink: 1;
+    width: auto;
+    /* İçeriğine göre genişler */
+}
+
+.form {
+    text-align: center;
+    display: flex;
+    /* Flex düzeni ile öğeleri yatayda hizalayacağız */
+    justify-content: space-between;
+    /* Öğeler arasına eşit boşluk bırakmak için */
+    width: 100%;
+    max-width: 371px;
+    /* Formun maksimum genişliği */
+    margin: 36px auto 0;
+    /* Üstten 36px margin, sağ ve sol otomatik margin ile ortalar */
+    gap: 5px;
+    /* Aralarındaki boşluğu biraz daha açmak için */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    /* Öğeler arasında boşluk */
+    padding: 20px;
+}
+
+/* Kart düzeni (her fotoğraf ve etkileşim bilgileri) */
+.gallery-item {
+    width: 360px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fotoğraf kısmı */
+.item-link {
+    display: block;
+    width: 100%;
+}
+
+.item-link img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    /* Fotoğraf ile içerik arasına sınır ekleyin */
+}
+
+/* Fotoğraf altındaki etkileşim bilgileri */
+.photo-info-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+/* Etkileşim bilgileri her bir başlık ve içerik */
+.photo-interaction {
+    display: flex;
+    flex-direction: column;
+}
+
+.interaction-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+.interaction-info {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+.img{
+    display: block;
+    max-width: 100%;
+}
